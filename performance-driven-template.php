@@ -3,7 +3,7 @@ get_header();?>
 <div class="pd-hero">
   <div class="container">
     <div class="row">
-      <div class="col">
+      <div class="col-md-6">
         <h1>Performance Driven</h1>
       </div>
     </div>
@@ -15,22 +15,30 @@ get_header();?>
   </div>
 </div>
 
-<section class="pd-content">
+<section class="pd-content my-5">
   <div class="container">
     <div class="row">
-      <div class="col d-flex justify-content-center">
+      <div class="col text-center p-5">
         <img src="<?php echo get_template_directory_uri() ?>/img/pd/objectives.svg" alt="">
+        <h4>Objectives</h4>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid</p>
       </div>
-      <div class="col d-flex justify-content-center">
+      <div class="col text-center p-5">
         <img src="<?php echo get_template_directory_uri() ?>/img/pd/mission.svg" alt="">
+        <h4>Mission</h4>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid</p>
       </div>
     </div>
     <div class="row">
-      <div class="col d-flex justify-content-center">
+      <div class="col text-center p-5">
         <img src="<?php echo get_template_directory_uri() ?>/img/pd/vision.svg" alt="">
+        <h4>Vision</h4>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid</p>
       </div>
-      <div class="col d-flex justify-content-center">
+      <div class="col text-center p-5">
         <img src="<?php echo get_template_directory_uri() ?>/img/pd/strength.svg" alt="">
+        <h4>Strength</h4>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid</p>
       </div>
     </div>
   </div>

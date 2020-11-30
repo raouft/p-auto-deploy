@@ -8016,7 +8016,51 @@ section.brands {
 
 .pd-hero {
   background: #6f2180;
+  color: #fff;
+  padding: 10em 0 5em; }
+  .pd-hero h1 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 5em; }
+  .pd-hero p {
+    font-size: 1.5em;
+    padding-left: 7em; }
+
+.pd-content h4 {
+  color: #6f2180;
+  margin: 20px 0; }
+
+.pd-content p {
+  max-width: 200px;
+  margin: 0 auto; }
+
+.contact__cover {
+  height: 600px;
+  position: relative;
+  background-size: cover;
+  background-position: center center; }
+  .contact__cover::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(19, 152, 158, 0.5); }
+
+.contact__info {
+  background: #6f2180;
+  padding: 4em 0;
   color: #fff; }
+  .contact__info h1 {
+    font-weight: bold;
+    font-size: 3em; }
+  .contact__info hr {
+    border-color: rgba(255, 255, 255, 0.7); }
+  .contact__info p {
+    font-size: 1.2em; }
+    .contact__info p a {
+      color: #fff; }
 
 .overlay {
   opacity: 0;
@@ -8177,6 +8221,7 @@ html[data-direction="down"] .navigation {
   transform: translate3d(0, -100%, 0); }
 
 .navigation {
+  top: 0;
   width: 100%;
   position: fixed;
   padding: 20px 0;
