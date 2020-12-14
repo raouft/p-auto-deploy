@@ -1,7 +1,7 @@
 <?php /* Template Name: Contact Page */ 
 get_header();?>
 
-<div class="mt-5">
+<div id="contact-top-section">
   <?php get_template_part('partials/contact-section'); ?>
 </div>
 

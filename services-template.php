@@ -24,28 +24,28 @@ get_header();?>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid</p>
         </div>
       </div>
-      <div class="col-md-4 mb-5">
+      <div class="col-lg-4 col-md-6 mb-5">
         <div class="services__service text-center">
           <img src="<?php echo get_template_directory_uri() ?>/img/services/digital.svg" alt="">
           <h3 class="mt-4 mb-3">Digital</h3>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid</p>
         </div>
       </div>
-      <div class="col-md-4 mb-5">
+      <div class="col-lg-4 col-md-6 mb-5">
         <div class="services__service text-center">
           <img src="<?php echo get_template_directory_uri() ?>/img/services/social_media.svg" alt="">
           <h3 class="mt-4 mb-3">Social Media</h3>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid</p>
         </div>
       </div>
-      <div class="col-md-4 mb-5">
+      <div class="col-lg-4 col-md-6 mb-5">
         <div class="services__service text-center">
           <img src="<?php echo get_template_directory_uri() ?>/img/services/events.svg" alt="">
           <h3 class="mt-4 mb-3">In-Store & Events</h3>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincid</p>
         </div>
       </div>
-      <div class="col-md-4 mb-5">
+      <div class="col-lg-4 col-md-6 mb-5">
         <div class="services__service text-center">
           <img src="<?php echo get_template_directory_uri() ?>/img/services/design.svg" alt="">
           <h3 class="mt-4 mb-3">Design</h3>

@@ -3,7 +3,7 @@ get_header();?>
 <div class="projects">
   <div class="container">
     <div class="row no-gutters d-flex justify-content-center">
-      <div class="col">
+      <div class="col-md-6">
         <a href="#">
           <div class="projects__project text-center"
             style="background-image: url('<?php echo get_template_directory_uri() ?>/img/work/case_1.jpg')">
@@ -14,7 +14,7 @@ get_header();?>
           </div>
         </a>
       </div>
-      <div class="col">
+      <div class="col-md-6">
         <a href="#">
           <div class="projects__project text-center"
             style="background-image: url('<?php echo get_template_directory_uri() ?>/img/work/case_2.jpg')">
@@ -27,7 +27,7 @@ get_header();?>
       </div>
     </div>
     <div class="row no-gutters d-flex justify-content-center">
-      <div class="col">
+      <div class="col-md-6">
         <a href="#">
           <div class="projects__project text-center"
             style="background-image: url('<?php echo get_template_directory_uri() ?>/img/work/case_3.jpg')">
@@ -38,7 +38,7 @@ get_header();?>
           </div>
         </a>
       </div>
-      <div class="col">
+      <div class="col-md-6">
         <a href="#">
           <div class="projects__project text-center"
             style="background-image: url('<?php echo get_template_directory_uri() ?>/img/work/case_4.png')">
@@ -51,7 +51,7 @@ get_header();?>
       </div>
     </div>
     <div class="row no-gutters d-flex justify-content-center">
-      <div class="col">
+      <div class="col-md-6">
         <a href="#">
           <div class="projects__project text-center"
             style="background-image: url('<?php echo get_template_directory_uri() ?>/img/work/case_5.jpg')">
@@ -62,7 +62,7 @@ get_header();?>
           </div>
         </a>
       </div>
-      <div class="col">
+      <div class="col-md-6">
         <a href="#">
           <div class="projects__project text-center"
             style="background-image: url('<?php echo get_template_directory_uri() ?>/img/work/case_6.jpg')">
@@ -75,7 +75,7 @@ get_header();?>
       </div>
     </div>
     <div class="row no-gutters d-flex justify-content-center">
-      <div class="col">
+      <div class="col-md-6">
         <a href="#">
           <div class="projects__project text-center"
             style="background-image: url('<?php echo get_template_directory_uri() ?>/img/work/case_7.jpg')">
@@ -86,7 +86,7 @@ get_header();?>
           </div>
         </a>
       </div>
-      <div class="col">
+      <div class="col-md-6">
         <a href="#">
           <div class="projects__project text-center"
             style="background-image: url('<?php echo get_template_directory_uri() ?>/img/work/case_8.jpg')">
