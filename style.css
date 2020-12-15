@@ -8677,6 +8677,54 @@ section.contact {
       section.contact-dark input::placeholder {
         color: #fff !important; }
 
+#contact-modal .modal-header {
+  border: none;
+  height: 0; }
+
+#contact-modal .modal-body {
+  padding: 1em 3em 3em; }
+  #contact-modal .modal-body h1 {
+    color: #13989e; }
+  #contact-modal .modal-body form#contact-form .form-group {
+    position: relative; }
+    #contact-modal .modal-body form#contact-form .form-group input {
+      font-weight: 500;
+      border: none;
+      outline: none;
+      border-bottom: 3px solid #808080;
+      padding: 10px 5px;
+      font-size: 1.75em;
+      display: block;
+      width: 100%;
+      margin-bottom: 25px;
+      transition: .25s all ease;
+      background: none;
+      margin-bottom: 1.5em; }
+      #contact-modal .modal-body form#contact-form .form-group input:focus {
+        border-color: #13989e;
+        box-shadow: none;
+        color: #13989e; }
+        #contact-modal .modal-body form#contact-form .form-group input:focus::placeholder {
+          color: #13989e; }
+    #contact-modal .modal-body form#contact-form .form-group textarea {
+      font-weight: 500;
+      border: none;
+      outline: none;
+      border-bottom: 3px solid #808080;
+      padding: 10px 5px;
+      font-size: 1.75em;
+      display: block;
+      width: 100%;
+      margin-bottom: 25px;
+      transition: .25s all ease;
+      background: none; }
+      #contact-modal .modal-body form#contact-form .form-group textarea:focus {
+        border-color: #13989e;
+        box-shadow: none;
+        color: #13989e; }
+        #contact-modal .modal-body form#contact-form .form-group textarea:focus::placeholder {
+          color: #13989e; }
+
 footer {
   padding: 5em 0;
   background: #13989e;
