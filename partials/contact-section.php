@@ -10,10 +10,12 @@
     </div>
     <div class="row d-flex justify-content-center mt-4">
       <div class="col-md-8 text-right">
-        <div class="form-group">
-          <input type="text" placeholder="Enter your name">
-        </div>
-        <a href="#" class="btn cta-btn is-dark">Next</a>
+      <form id="contact-modal-trigger">
+          <div class="form-group">
+            <input type="text" placeholder="Enter your name" id="placeholder_name_input">
+          </div>
+          <button class="btn cta-btn is-dark" type="submit">Next</button>
+        </form>
       </div>
     </div>
   </div>
