@@ -7855,23 +7855,18 @@ body {
 
 .cursor {
   position: fixed;
-  background-color: black;
-  width: 40px;
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 70px;
+  height: 70px;
   border-radius: 100%;
   z-index: 1;
   transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform, 0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
   user-select: none;
   pointer-events: none;
-  z-index: 10000;
-  transform: scale(1);
-  transform: translate(-20px, -20px); }
+  z-index: 9998;
+  transform: translate(-20px, -20px);
+  opacity: 0; }
   .cursor.active {
-    opacity: 1;
-    transform: scale(0); }
-  .cursor.menu-active {
-    opacity: 1;
-    transform: scale(0); }
-  .cursor.hovered {
     opacity: 1; }
 
 .cursor-follower {
@@ -7908,48 +7903,124 @@ body {
   .home .navigation.navigation--top .hamburger.is-active .hamburger-inner, .home .navigation.navigation--top .hamburger.is-active .hamburger-inner::before, .home .navigation.navigation--top .hamburger.is-active .hamburger-inner::after, .page-template-case-studies-template .navigation.navigation--top .hamburger.is-active .hamburger-inner, .page-template-case-studies-template .navigation.navigation--top .hamburger.is-active .hamburger-inner::before, .page-template-case-studies-template .navigation.navigation--top .hamburger.is-active .hamburger-inner::after {
     background-color: #fff; }
 
+.hero-carousel {
+  background: #ecf0f1; }
+  .hero-carousel__slide {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center; }
+    .hero-carousel__slide h1 {
+      color: white;
+      font-size: 3.5em;
+      margin-bottom: 30px; }
+
+section.news {
+  padding: 5em 0; }
+  section.news.news--dark {
+    background: #6f2180;
+    color: #fff; }
+  section.news h1 {
+    color: #13989e;
+    font-size: 5em;
+    transition: 1.5s all ease-out;
+    transform: translate(400px);
+    opacity: 0; }
+    section.news h1.is-inview {
+      transform: translate(0px);
+      opacity: 1; }
+  section.news article {
+    padding: 1em; }
+    section.news article.is-inview picture img {
+      transition: transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      transform: scale(1); }
+    section.news article picture {
+      height: 400px; }
+      section.news article picture img {
+        transform: scale(1.5);
+        transform-origin: center center; }
+    section.news article .news-item__info {
+      font-size: .75em; }
+    section.news article .news-item__excerpt {
+      font-weight: 500; }
+    section.news article .news-item__read-more {
+      color: #13989e;
+      font-weight: bold; }
+
+section.wisdom {
+  height: 100vh;
+  min-height: 350px;
+  background: #13989e;
+  color: #fff; }
+  section.wisdom .split-parent {
+    overflow: hidden; }
+  section.wisdom .quote {
+    font-size: 2.7em;
+    transition: 1s all ease;
+    overflow: hidden; }
+    section.wisdom .quote .author {
+      font-size: 1.5em;
+      font-weight: 500; }
+
+section.brands {
+  padding: 5em 0 0; }
+  section.brands h1 {
+    color: #13989e;
+    font-size: 5em; }
+  section.brands .brand-logo-wrapper {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; }
+    section.brands .brand-logo-wrapper .brand-logo {
+      width: auto;
+      display: inline-block;
+      transform: translateY(0);
+      transition: all 0.6s cubic-bezier(0.475, 0.425, 0, 0.995); }
+    section.brands .brand-logo-wrapper .brand-logo-hover {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      transform: translateY(-100%);
+      transition: all 0.6s cubic-bezier(0.475, 0.425, 0, 0.995); }
+    section.brands .brand-logo-wrapper:hover .brand-logo {
+      transform: translateY(100%); }
+    section.brands .brand-logo-wrapper:hover .brand-logo-hover {
+      transform: translateY(0); }
+
 .player {
   width: 100%;
   height: 0;
   padding-bottom: 100vh;
   box-shadow: 0px 10px 0px -3px rgba(0, 0, 0, 0.2);
   position: relative;
-  overflow: hidden;
-  background: #000000; }
-
-.player:fullscreen {
-  padding-bottom: 100vh; }
-
-.player:-webkit-full-screen {
-  padding-bottom: 100vh; }
-
-.player:-moz-full-screen {
-  padding-bottom: 100vh; }
-
-.player:-ms-fullscreen {
-  padding-bottom: 100vh; }
-
-.player video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
   top: 0;
-  left: 0; }
+  left: 0;
+  overflow: hidden;
+  background: #000000;
+  z-index: 998; }
+  .player video {
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0; }
+  .player :hover .controls {
+    bottom: 0;
+    transition: all 0.2s ease-out; }
+  .player :fullscreen {
+    padding-bottom: 100vh; }
 
 .controls {
   padding: 0;
   position: absolute;
-  bottom: 48px;
+  bottom: 0;
   width: 100%;
   height: 48px;
   box-sizing: border-box;
   background: linear-gradient(180deg, rgba(37, 37, 37, 0) 10%, rgba(37, 37, 37, 0.6) 80%);
   transition: all 0.2s ease-in 5s; }
-
-.player:hover .controls {
-  bottom: 0;
-  transition: all 0.2s ease-out; }
 
 .time {
   position: absolute;
@@ -7967,9 +8038,8 @@ body {
   left: 20px;
   bottom: 100%;
   transition: height 0.1s ease-in-out; }
-
-.progress:hover {
-  height: 10px; }
+  .progress :hover {
+    height: 10px; }
 
 .progress-filled {
   background: #13989e;
@@ -8045,7 +8115,8 @@ body {
   margin: auto;
   transform: rotate(-90deg) scale(0.8);
   transition: -webkit-clip-path 0.3s ease-in 0.1s, shape-inside 0.3s ease-in 0.1s, transform 0.8s cubic-bezier(0.85, -0.25, 0.25, 1.425);
-  cursor: pointer; }
+  cursor: pointer;
+  display: none; }
 
 .play-btn.paused {
   transform: rotate(0deg); }
@@ -8099,7 +8170,7 @@ button:focus {
   font-weight: bold; }
 
 .fullscreen {
-  display: flex;
+  display: none;
   justify-content: center;
   cursor: pointer;
   transition: .3s all ease; }
@@ -8107,9 +8178,6 @@ button:focus {
     transform: scale(1.2); }
 
 #video-canvas {
-  display: none; }
-
-.home footer {
   display: none; }
 
 .services-hero {
@@ -8126,13 +8194,13 @@ button:focus {
   padding: 5em 0; }
   .services h2 {
     color: #6f2180;
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 0.038rem;
     margin-bottom: 2.5em; }
   .services__service img {
     height: 220px; }
   .services__service h3 {
-    font-weight: 300;
+    font-weight: 500;
     letter-spacing: 0.038rem;
     color: #6f2180; }
 
@@ -8212,10 +8280,13 @@ button:focus {
 .about-hero {
   background-color: #6f2180;
   background-position: top right;
-  background-size: 70%;
+  background-size: 60%;
   background-repeat: no-repeat;
   position: relative;
   height: 1000px; }
+  @media (max-width: 1200px) {
+    .about-hero {
+      background-size: 70%; } }
   @media (max-width: 768px) {
     .about-hero {
       height: auto;
@@ -8269,83 +8340,33 @@ button:focus {
   .about-content__logos {
     margin-top: 5em; }
 
-.hero-carousel {
-  background: #ecf0f1; }
-  .hero-carousel__slide {
-    height: 100vh;
-    width: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center; }
-    .hero-carousel__slide h1 {
-      color: white;
-      font-size: 3.5em;
-      margin-bottom: 30px; }
-
-section.news {
-  padding: 5em 0; }
-  section.news.news--dark {
-    background: #6f2180;
-    color: #fff; }
-  section.news h1 {
-    color: #13989e;
-    font-size: 5em; }
-  section.news article {
-    padding: 1em; }
-    section.news article.is-inview picture img {
-      transition: transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      transform: scale(1); }
-    section.news article picture {
-      height: 400px; }
-      section.news article picture img {
-        transform: scale(1.5);
-        transform-origin: center center; }
-    section.news article .news-item__info {
-      font-size: .75em; }
-    section.news article .news-item__excerpt {
-      font-weight: 500; }
-    section.news article .news-item__read-more {
-      color: #13989e;
-      font-weight: bold; }
-
-section.wisdom {
-  height: 100vh;
-  min-height: 350px;
-  background: #13989e;
-  color: #fff; }
-  section.wisdom .split-parent {
-    overflow: hidden; }
-  section.wisdom .quote {
-    font-size: 2.7em;
-    transition: 1s all ease;
-    overflow: hidden; }
-    section.wisdom .quote .author {
-      font-size: 1.5em;
-      font-weight: 500; }
-
-section.brands {
-  padding: 5em 0; }
-  section.brands h1 {
-    color: #13989e;
-    font-size: 5em; }
-
 .pd-hero {
   background: #6f2180;
   color: #fff;
-  padding: 10em 0 5em; }
+  padding: 10em 0 15em; }
+  @media (max-width: 992px) {
+    .pd-hero {
+      padding: 10em 0 18em; } }
+  @media (max-width: 768px) {
+    .pd-hero {
+      padding: 10em 0 5em; } }
   .pd-hero h1 {
     color: #fff;
     font-weight: bold;
-    font-size: 5em; }
+    font-size: 5em;
+    max-width: 500px; }
     @media (max-width: 768px) {
       .pd-hero h1 {
         font-size: 3em; } }
   .pd-hero p {
     font-size: 1.5em;
-    padding-left: 7em; }
+    position: absolute;
+    top: 120px;
+    left: 300px;
+    max-width: 500px; }
     @media (max-width: 768px) {
       .pd-hero p {
-        padding-left: 0; } }
+        position: static; } }
 
 .pd-content h4 {
   color: #6f2180;
@@ -8376,10 +8397,13 @@ section.brands {
 .careers-hero {
   background-color: #6f2180;
   background-position: top right;
-  background-size: 70%;
+  background-size: 60%;
   background-repeat: no-repeat;
   position: relative;
   height: 1000px; }
+  @media (max-width: 1200px) {
+    .careers-hero {
+      background-size: 70%; } }
   @media (max-width: 768px) {
     .careers-hero {
       height: auto;
@@ -8494,7 +8518,8 @@ section.brands {
 .contact__info {
   background: #6f2180;
   padding: 4em 0;
-  color: #fff; }
+  color: #fff;
+  position: relative; }
   .contact__info h1 {
     font-weight: bold;
     font-size: 3em; }
@@ -8504,6 +8529,12 @@ section.brands {
     font-size: 1.2em; }
     .contact__info p a {
       color: #fff; }
+  .contact__info iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%; }
 
 .overlay {
   opacity: 0;

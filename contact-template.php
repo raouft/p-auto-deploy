@@ -1,5 +1,5 @@
-<?php /* Template Name: Contact Page */ 
-get_header();?>
+<?php /* Template Name: Contact Page */
+get_header(); ?>
 
 <div id="contact-top-section">
   <?php get_template_part('partials/contact-section'); ?>
@@ -18,6 +18,9 @@ get_header();?>
         <hr>
         <p><a href="mailto:hello@perceptum.ro">hello@perceptum.ro</a></p>
       </div>
+      <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD2-BMt4xgRpeugqAlT98mdFb5cbdIwduE
+          &q=5-7+Dimitrie+Pompeiu+Bvd.,+Hermes+Business+Campus,+Building+C,+1st+floor">
+      </iframe>
     </div>
   </div>
 </section>

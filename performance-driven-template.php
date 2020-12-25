@@ -1,14 +1,10 @@
-<?php /* Template Name: Performance Driven Page */ 
-get_header();?>
+<?php /* Template Name: Performance Driven Page */
+get_header(); ?>
 <div class="pd-hero">
   <div class="container">
     <div class="row">
-      <div class="col-md-6">
+      <div class="col">
         <h1>Performance Driven</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-md-10">
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo</p>
       </div>
     </div>

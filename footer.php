@@ -10,13 +10,13 @@
       </div>
       <div class="col d-flex justify-content-center">
         <?php
-            wp_nav_menu( array( 'theme_location' => 'footer_menu_1' ) );
-            ?>
+        wp_nav_menu(array('theme_location' => 'footer_menu_1'));
+        ?>
       </div>
       <div class="col d-flex justify-content-center">
         <?php
-            wp_nav_menu( array( 'theme_location' => 'footer_menu_2' ) );
-            ?>
+        wp_nav_menu(array('theme_location' => 'footer_menu_2'));
+        ?>
       </div>
       <div class="col text-right">
         <div class="social-icons d-flex justify-content-between">
@@ -35,7 +35,7 @@
           <p><a href="tel:40721234567">Tel: +40 721 234 567</a></p>
         </div>
         <div class="mt-3">
-          <p>&copy; <?php echo date( 'Y' ); ?> Perceptum Concept</p>
+          <p>&copy; <?php echo date('Y'); ?> Perceptum Concept</p>
         </div>
       </div>
     </div>
@@ -70,6 +70,7 @@
   </div>
 </div>
 <?php wp_footer(); ?>
+<?php get_template_part('partials/cursor'); ?>
 </body>
 
 </html>
