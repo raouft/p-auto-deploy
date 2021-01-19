@@ -96,7 +96,7 @@
     <div class="container">
       <div class="row">
         <div class="col text-center">
-          <h1 data-scroll>News</h1>
+          <h1 class="animate-heading">News</h1>
         </div>
       </div>
       <div class="row">
@@ -185,7 +185,7 @@
     <div class="container">
       <div class="row">
         <div class="col text-center">
-          <h1>Our Brands</h1>
+          <h1 class="animate-heading">Our Brands</h1>
         </div>
       </div>
       <div class="row d-flex justify-content-center">

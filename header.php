@@ -19,7 +19,7 @@
             <img src="<?php echo get_template_directory_uri() ?>/img/logo-color.svg" alt="">
           </a>
         </div>
-        <div class="col d-flex justify-content-end">
+        <div class="col d-flex justify-content-end align-self-center">
           <button class="hamburger hamburger--collapse" type="button">
             <span class="hamburger-box">
               <span class="hamburger-inner"></span>

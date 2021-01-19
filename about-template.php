@@ -1,5 +1,5 @@
-<?php /* Template Name: About Page */ 
-get_header();?>
+<?php /* Template Name: About Page */
+get_header(); ?>
 <section class="about-hero" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/about/about_bg.jpg);">
   <div class="container">
     <div class="row">
@@ -32,24 +32,106 @@ get_header();?>
       </div>
     </div>
 
-    <div class="about-content__logos">
+    <div class="logos mt-4">
       <div class="row">
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
+        <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="brand-logo-wrapper">
+            <a href="#">
+              <span class="brand-logo">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-1.png" alt="">
+              </span>
+              <span class="brand-logo-hover">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-1.png" alt="">
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="brand-logo-wrapper">
+            <a href="#">
+              <span class="brand-logo">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-3.png" alt="">
+              </span>
+              <span class="brand-logo-hover">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-3.png" alt="">
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="brand-logo-wrapper">
+            <a href="#">
+              <span class="brand-logo">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-5.png" alt="">
+              </span>
+              <span class="brand-logo-hover">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-5.png" alt="">
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="brand-logo-wrapper">
+            <a href="#">
+              <span class="brand-logo">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-1.png" alt="">
+              </span>
+              <span class="brand-logo-hover">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-1.png" alt="">
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
       <div class="row">
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
-      </div>
-      <div class="row">
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
-        <div class="col mt-3 mb-3 text-center"><h1 style="color: #333; font-size: 3em;">logo</h1></div>
+        <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="brand-logo-wrapper">
+            <a href="#">
+              <span class="brand-logo">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-4.png" alt="">
+              </span>
+              <span class="brand-logo-hover">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-4.png" alt="">
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="brand-logo-wrapper">
+            <a href="#">
+              <span class="brand-logo">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-2.png" alt="">
+              </span>
+              <span class="brand-logo-hover">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-2.png" alt="">
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="brand-logo-wrapper">
+            <a href="#">
+              <span class="brand-logo">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-1.png" alt="">
+              </span>
+              <span class="brand-logo-hover">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-1.png" alt="">
+              </span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="brand-logo-wrapper">
+            <a href="#">
+              <span class="brand-logo">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-3.png" alt="">
+              </span>
+              <span class="brand-logo-hover">
+                <img src="https://borgholm.qodeinteractive.com/wp-content/uploads/2020/07/h9-client-img-3.png" alt="">
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
