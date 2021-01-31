@@ -1,4 +1,4 @@
-<?php /* Template Name: Careers Page */ 
+<?php /* Template Name: Careers Page */
 get_header();?>
 <section class="careers-hero" style="background-image: url(<?php echo get_template_directory_uri() ?>/img/careers/careers_bg.jpg);">
   <div class="container">
@@ -7,13 +7,13 @@ get_header();?>
         <h1>Careers</h1>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-5">
+    <div class="row d-flex">
+      <div class="col-md-5 order-2 order-md-1">
         <img src="<?php echo get_template_directory_uri() ?>/img/careers/career_1.png" alt="" class="w-100">
       </div>
-      <div class="col-md-7 d-flex align-items-center">
+      <div class="col-md-7 d-flex align-items-center order-1 order-md-2">
         <div class="careers-hero__intro-text">
-          <h3 class="mb-4">Working at Perceptum</h3>
+          <h3 class="mb-4 d-none d-md-block">Working at Perceptum</h3>
           <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper</p>
         </div>
       </div>

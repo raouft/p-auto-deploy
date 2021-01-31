@@ -1,10 +1,10 @@
-<?php /* Template Name: News Page */ 
+<?php /* Template Name: News Page */
 get_header();?>
 <div class="news-hero">
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1>News</h1>
+        <h1 class="mb-4 mb-md-0">News</h1>
       </div>
     </div>
     <div class="row">

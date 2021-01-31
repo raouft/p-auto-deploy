@@ -1,7 +1,8 @@
 <?php get_header() ?>
 <div class='player-container'>
   <div class='player'>
-    <video id='video' src='https://perceptum.s3-us-west-2.amazonaws.com/perceptum_video.mp4' crossorigin playsinline autoplay preload></video>
+    <video id='video' src='https://perceptum.s3-us-west-2.amazonaws.com/perceptum_video.mp4' crossorigin playsinline
+      autoplay preload></video>
     <div class='play-btn-big'></div>
     <div class='controls'>
       <!-- <div class="time"><span class="time-current"></span><span class="time-total"></span></div> -->
@@ -13,11 +14,19 @@
           <div class='volume'>
             <div class='volume-btn loud'>
               <svg width="26" height="24" viewBox="0 0 26 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M6.75497 17.6928H2C0.89543 17.6928 0 16.7973 0 15.6928V8.30611C0 7.20152 0.895431 6.30611 2 6.30611H6.75504L13.9555 0.237289C14.6058 -0.310807 15.6 0.151473 15.6 1.00191V22.997C15.6 23.8475 14.6058 24.3098 13.9555 23.7617L6.75497 17.6928Z" transform="translate(0 0.000518799)" fill="white" />
-                <path id="volume-low" d="M0 9.87787C2.87188 9.87787 5.2 7.66663 5.2 4.93893C5.2 2.21124 2.87188 0 0 0V2C1.86563 2 3.2 3.41162 3.2 4.93893C3.2 6.46625 1.86563 7.87787 0 7.87787V9.87787Z" transform="translate(17.3333 7.44955)" fill="white" />
+                <path
+                  d="M6.75497 17.6928H2C0.89543 17.6928 0 16.7973 0 15.6928V8.30611C0 7.20152 0.895431 6.30611 2 6.30611H6.75504L13.9555 0.237289C14.6058 -0.310807 15.6 0.151473 15.6 1.00191V22.997C15.6 23.8475 14.6058 24.3098 13.9555 23.7617L6.75497 17.6928Z"
+                  transform="translate(0 0.000518799)" fill="white" />
+                <path id="volume-low"
+                  d="M0 9.87787C2.87188 9.87787 5.2 7.66663 5.2 4.93893C5.2 2.21124 2.87188 0 0 0V2C1.86563 2 3.2 3.41162 3.2 4.93893C3.2 6.46625 1.86563 7.87787 0 7.87787V9.87787Z"
+                  transform="translate(17.3333 7.44955)" fill="white" />
 
-                <path id="volume-high" d="M0 16.4631C4.78647 16.4631 8.66667 12.7777 8.66667 8.23157C8.66667 3.68539 4.78647 0 0 0V2C3.78022 2 6.66667 4.88577 6.66667 8.23157C6.66667 11.5773 3.78022 14.4631 0 14.4631V16.4631Z" transform="translate(17.3333 4.15689)" fill="white" />
-                <path id="volume-off" d="M1.22565 0L0 1.16412L3.06413 4.0744L0 6.98471L1.22565 8.14883L4.28978 5.23853L7.35391 8.14883L8.57956 6.98471L5.51544 4.0744L8.57956 1.16412L7.35391 0L4.28978 2.91031L1.22565 0Z" transform="translate(17.3769 8.31403)" fill="white" />
+                <path id="volume-high"
+                  d="M0 16.4631C4.78647 16.4631 8.66667 12.7777 8.66667 8.23157C8.66667 3.68539 4.78647 0 0 0V2C3.78022 2 6.66667 4.88577 6.66667 8.23157C6.66667 11.5773 3.78022 14.4631 0 14.4631V16.4631Z"
+                  transform="translate(17.3333 4.15689)" fill="white" />
+                <path id="volume-off"
+                  d="M1.22565 0L0 1.16412L3.06413 4.0744L0 6.98471L1.22565 8.14883L4.28978 5.23853L7.35391 8.14883L8.57956 6.98471L5.51544 4.0744L8.57956 1.16412L7.35391 0L4.28978 2.91031L1.22565 0Z"
+                  transform="translate(17.3769 8.31403)" fill="white" />
               </svg>
 
             </div>
@@ -28,18 +37,11 @@
         </div>
         <div class='play-btn paused'></div>
         <div class="controls-right">
-          <!-- <div class='speed'>
-            <ul class='speed-list'>
-              <li class='speed-item' data-speed='0.5'>0.5x</li>
-              <li class='speed-item' data-speed='0.75'>0.75x</li>
-              <li class='speed-item' data-speed='1' class='active'>1x</li>
-              <li class='speed-item' data-speed='1.5'>1.5x</li>
-              <li class='speed-item' data-speed='2'>2x</li>
-            </ul>
-          </div> -->
-          <div class='fullscreen'>
+          <div class='fullscreen d-flex d-sm-none'>
             <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M0 0V-1.5H-1.5V0H0ZM0 18H-1.5V19.5H0V18ZM26 18V19.5H27.5V18H26ZM26 0H27.5V-1.5H26V0ZM1.5 6.54545V0H-1.5V6.54545H1.5ZM0 1.5H10.1111V-1.5H0V1.5ZM-1.5 11.4545V18H1.5V11.4545H-1.5ZM0 19.5H10.1111V16.5H0V19.5ZM24.5 11.4545V18H27.5V11.4545H24.5ZM26 16.5H15.8889V19.5H26V16.5ZM27.5 6.54545V0H24.5V6.54545H27.5ZM26 -1.5H15.8889V1.5H26V-1.5Z" transform="translate(2 2)" fill="white" />
+              <path
+                d="M0 0V-1.5H-1.5V0H0ZM0 18H-1.5V19.5H0V18ZM26 18V19.5H27.5V18H26ZM26 0H27.5V-1.5H26V0ZM1.5 6.54545V0H-1.5V6.54545H1.5ZM0 1.5H10.1111V-1.5H0V1.5ZM-1.5 11.4545V18H1.5V11.4545H-1.5ZM0 19.5H10.1111V16.5H0V19.5ZM24.5 11.4545V18H27.5V11.4545H24.5ZM26 16.5H15.8889V19.5H26V16.5ZM27.5 6.54545V0H24.5V6.54545H27.5ZM26 -1.5H15.8889V1.5H26V-1.5Z"
+                transform="translate(2 2)" fill="white" />
             </svg>
 
             </svg>
@@ -55,37 +57,35 @@
 
 <div class="case-studies">
   <div class="hero-carousel">
-    <div class="hero-carousel__slide" style="background-image: url('<?php echo get_template_directory_uri() ?>/img/case_bg.png')">
+    <div class="hero-carousel__slide"
+      style="background-image: url('<?php echo get_template_directory_uri() ?>/img/case_bg.png')">
       <div class="container h-100">
         <div class="row h-100">
           <div class="col d-flex align-items-center">
             <div class="hero-carousel__text">
               <h1>Study case <br> no 1</h1>
               <a href="#" class="btn cta-btn is-light">See Work</a>
+              <div class="hero-carousel__navigation d-sm-none d-block">
+                <img id="prev" src="<?php echo get_template_directory_uri() ?>/img/left_arrow.svg">
+                <img id="next" src="<?php echo get_template_directory_uri() ?>/img/right_arrow.svg">
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="hero-carousel__slide" style="background-image: url('<?php echo get_template_directory_uri() ?>/img/case_bg.png')">
+    <div class="hero-carousel__slide"
+      style="background-image: url('<?php echo get_template_directory_uri() ?>/img/case_bg.png')">
       <div class="container h-100">
         <div class="row h-100">
           <div class="col d-flex align-items-center">
             <div class="hero-carousel__text">
               <h1>Study case <br> no 1</h1>
               <a href="#" class="btn cta-btn is-light">See Work</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-carousel__slide" style="background-image: url('<?php echo get_template_directory_uri() ?>/img/case_bg.png')">
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col d-flex align-items-center">
-            <div class="hero-carousel__text">
-              <h1>Study case <br> no 1</h1>
-              <a href="#" class="btn cta-btn is-light">See Work</a>
+              <div class="hero-carousel__navigation d-sm-none d-block">
+                <img id="prev" src="<?php echo get_template_directory_uri() ?>/img/left_arrow.svg">
+                <img id="next" src="<?php echo get_template_directory_uri() ?>/img/right_arrow.svg">
+              </div>
             </div>
           </div>
         </div>
@@ -95,86 +95,76 @@
   <section class="news">
     <div class="container">
       <div class="row">
-        <div class="col text-center">
+        <div class="col text-sm-center">
           <h1 class="animate-heading">News</h1>
         </div>
       </div>
       <div class="row">
-        <div class="col text-center">
-          <p>
+        <div class="col text-sm-center">
+          <p class="news__subheading">
             <b>Learn more about what Perceptum and its clients have been up to.</b>
           </p>
         </div>
       </div>
-
-      <div class="row mt-5">
-        <div class="col-md-6">
-          <article data-scroll data-scroll-speed="1" class="news-item">
-            <a href="#" class="d-block w-100 overflow-hidden">
-              <picture class="w-100 h-100 position-relative overflow-hidden">
-                <img src="<?php echo get_template_directory_uri() ?>/img/news_1.jpg" class="w-100 h-100">
-              </picture>
-            </a>
-            <div class="mt-4 pl-3 pr-3">
-              <p class="news-item__info">December 10, 2019 | Bucharest</p>
-              <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
-              <a href="#" class="news-item__read-more">Read More ></a>
-            </div>
-          </article>
+    </div>
+    <div class="news__articles">
+      <article data-scroll data-scroll-speed="1" class="news-item">
+        <a href="#" class="d-block w-100 overflow-hidden">
+          <picture class="w-100 h-100 position-relative overflow-hidden">
+            <img src="<?php echo get_template_directory_uri() ?>/img/news_1.jpg" class="h-100">
+          </picture>
+        </a>
+        <div class="mt-4 pl-3 pr-3">
+          <p class="news-item__info">December 10, 2019 | Bucharest</p>
+          <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
+          <a href="#" class="news-item__read-more">Read More ></a>
         </div>
-        <div class="col-md-6 mt-5">
-          <article data-scroll data-scroll-speed="2" class="news-item">
-            <a href="#" class="d-block w-100 overflow-hidden">
-              <picture class="w-100 h-100 position-relative overflow-hidden">
-                <img src="<?php echo get_template_directory_uri() ?>/img/news_2.png" class="w-100 h-100">
-              </picture>
-            </a>
-            <div class="mt-4 pl-3 pr-3">
-              <p class="news-item__info">December 10, 2019 | Bucharest</p>
-              <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
-              <a href="#" class="news-item__read-more">Read More ></a>
-            </div>
-          </article>
+      </article>
+      <article data-scroll data-scroll-speed="2" class="news-item">
+        <a href="#" class="d-block w-100 overflow-hidden">
+          <picture class="w-100 h-100 position-relative overflow-hidden">
+            <img src="<?php echo get_template_directory_uri() ?>/img/news_2.png" class="h-100">
+          </picture>
+        </a>
+        <div class="mt-4 pl-3 pr-3">
+          <p class="news-item__info">December 10, 2019 | Bucharest</p>
+          <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
+          <a href="#" class="news-item__read-more">Read More ></a>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <article data-scroll data-scroll-speed="1" class="news-item">
-            <a href="#" class="d-block w-100 overflow-hidden">
-              <picture class="w-100 h-100 position-relative overflow-hidden">
-                <img src="<?php echo get_template_directory_uri() ?>/img/news_1.jpg" class="w-100 h-100">
-              </picture>
-            </a>
-            <div class="mt-4 pl-3 pr-3">
-              <p class="news-item__info">December 10, 2019 | Bucharest</p>
-              <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
-              <a href="#" class="news-item__read-more">Read More ></a>
-            </div>
-          </article>
+      </article>
+      <article data-scroll data-scroll-speed="1" class="news-item">
+        <a href="#" class="d-block w-100 overflow-hidden">
+          <picture class="w-100 h-100 position-relative overflow-hidden">
+            <img src="<?php echo get_template_directory_uri() ?>/img/news_1.jpg" class="h-100">
+          </picture>
+        </a>
+        <div class="mt-4 pl-3 pr-3">
+          <p class="news-item__info">December 10, 2019 | Bucharest</p>
+          <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
+          <a href="#" class="news-item__read-more">Read More ></a>
         </div>
-        <div class="col-md-6 mt-5">
-          <article data-scroll data-scroll-speed="2" class="news-item">
-            <a href="#" class="d-block w-100 overflow-hidden">
-              <picture class="w-100 h-100 position-relative overflow-hidden">
-                <img src="<?php echo get_template_directory_uri() ?>/img/news_2.png" class="w-100 h-100">
-              </picture>
-            </a>
-            <div class="mt-4 pl-3 pr-3">
-              <p class="news-item__info">December 10, 2019 | Bucharest</p>
-              <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
-              <a href="#" class="news-item__read-more">Read More ></a>
-            </div>
-          </article>
+      </article>
+      <article data-scroll data-scroll-speed="2" class="news-item">
+        <a href="#" class="d-block w-100 overflow-hidden">
+          <picture class="w-100 h-100 position-relative overflow-hidden">
+            <img src="<?php echo get_template_directory_uri() ?>/img/news_2.png" class="h-100">
+          </picture>
+        </a>
+        <div class="mt-4 pl-3 pr-3">
+          <p class="news-item__info">December 10, 2019 | Bucharest</p>
+          <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
+          <a href="#" class="news-item__read-more">Read More ></a>
         </div>
-      </div>
+      </article>
     </div>
   </section>
 
   <section class="wisdom">
     <div class="container h-100">
       <div class="row h-100 d-flex align-items-center">
-        <div class="col text-center">
-          <h1 class="quote text-left">“Insight is not a light bulb that goes off inside our heads. It is a flickering candle that can easily be snuffed out.”</h1>
+        <div class="col text-sm-center">
+          <h1 class="quote text-left">“Insight is not a light bulb that goes off inside our heads. It is a flickering
+            candle that can easily be snuffed out.”</h1>
           <h6 class="author text-right mt-4">&#8211; Malcolm Gladwell</h6>
         </div>
       </div>
@@ -184,14 +174,15 @@
   <section class="brands">
     <div class="container">
       <div class="row">
-        <div class="col text-center">
+        <div class="col text-sm-center">
           <h1 class="animate-heading">Our Brands</h1>
         </div>
       </div>
       <div class="row d-flex justify-content-center">
-        <div class="col-md-5 text-center">
-          <p>
-            <b>For the last 7 years, we have used creativity to drive growth for tens of clients around the country—all by tapping into the power of human emotion.</b>
+        <div class="col-md-5 text-sm-center">
+          <p class="brands__subheading">
+            <b>For the last 7 years, we have used creativity to drive growth for tens of clients around the country—all
+              by tapping into the power of human emotion.</b>
           </p>
         </div>
       </div>
