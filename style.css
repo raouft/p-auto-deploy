@@ -8043,6 +8043,9 @@ section.news {
         section.news article a picture img {
           transform: scale(1.5);
           transform-origin: center center; }
+      @media (max-width: 576px) {
+        section.news article a {
+          height: 250px; } }
     section.news article .news-item__info {
       font-size: 0.75em; }
     section.news article .news-item__excerpt {
@@ -8087,8 +8090,7 @@ section.brands {
 
 .player {
   width: 100%;
-  height: 0;
-  padding-bottom: 100vh;
+  height: 100vh;
   box-shadow: 0px 10px 0px -3px rgba(0, 0, 0, 0.2);
   position: relative;
   top: 0;
@@ -8634,6 +8636,9 @@ button:focus {
   padding: 4em 0;
   color: #fff;
   position: relative; }
+  @media (max-width: 768px) {
+    .contact__info {
+      padding-bottom: 25em; } }
   .contact__info h1 {
     font-weight: bold;
     font-size: 3em; }
@@ -8649,6 +8654,12 @@ button:focus {
     right: 0;
     width: 50%;
     height: 100%; }
+    @media (max-width: 768px) {
+      .contact__info iframe {
+        top: unset;
+        bottom: 0;
+        width: 100%;
+        height: 350px; } }
 
 .overlay {
   opacity: 0;
@@ -8657,7 +8668,9 @@ button:focus {
   width: 100vw;
   height: 100%;
   background: rgba(0, 0, 0, 0.65);
+  padding-top: 75px;
   z-index: 998;
+  overflow-y: scroll;
   top: 0;
   -webkit-transform: scale(1.8);
   -moz-transform: scale(1.8);

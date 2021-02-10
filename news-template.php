@@ -24,7 +24,7 @@ get_header();?>
         <article data-scroll data-scroll-speed="1" class="news-item">
           <a href="#" class="d-block w-100 overflow-hidden">
             <picture class="w-100 h-100 position-relative overflow-hidden">
-              <img src="<?php echo get_template_directory_uri() ?>/img/news_1.jpg" class="w-100 h-100">
+              <img src="<?php echo get_template_directory_uri() ?>/img/news_1.jpg" class="h-100">
             </picture>
           </a>
           <div class="mt-4 pl-3 pr-3">
@@ -38,7 +38,7 @@ get_header();?>
         <article data-scroll data-scroll-speed="2" class="news-item">
           <a href="#" class="d-block w-100 overflow-hidden">
             <picture class="w-100 h-100 position-relative overflow-hidden">
-              <img src="<?php echo get_template_directory_uri() ?>/img/news_2.png" class="w-100 h-100">
+              <img src="<?php echo get_template_directory_uri() ?>/img/news_2.png" class="h-100">
             </picture>
           </a>
           <div class="mt-4 pl-3 pr-3">
@@ -54,7 +54,7 @@ get_header();?>
         <article data-scroll data-scroll-speed="1" class="news-item">
           <a href="#" class="d-block w-100 overflow-hidden">
             <picture class="w-100 h-100 position-relative overflow-hidden">
-              <img src="<?php echo get_template_directory_uri() ?>/img/news_1.jpg" class="w-100 h-100">
+              <img src="<?php echo get_template_directory_uri() ?>/img/news_1.jpg" class="h-100">
             </picture>
           </a>
           <div class="mt-4 pl-3 pr-3">
@@ -68,7 +68,7 @@ get_header();?>
         <article data-scroll data-scroll-speed="2" class="news-item">
           <a href="#" class="d-block w-100 overflow-hidden">
             <picture class="w-100 h-100 position-relative overflow-hidden">
-              <img src="<?php echo get_template_directory_uri() ?>/img/news_2.png" class="w-100 h-100">
+              <img src="<?php echo get_template_directory_uri() ?>/img/news_2.png" class="h-100">
             </picture>
           </a>
           <div class="mt-4 pl-3 pr-3">

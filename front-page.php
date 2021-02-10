@@ -2,7 +2,7 @@
 <div class='player-container'>
   <div class='player'>
     <video id='video' src='https://perceptum.s3-us-west-2.amazonaws.com/perceptum_video.mp4' crossorigin playsinline
-      autoplay preload></video>
+     preload></video>
     <div class='play-btn-big'></div>
     <div class='controls'>
       <!-- <div class="time"><span class="time-current"></span><span class="time-total"></span></div> -->
