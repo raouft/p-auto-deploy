@@ -189,7 +189,7 @@
 
       <div class="logos mt-4">
         <div class="row">
-          <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="col-sm-6 col-md-3 mt-3 mb-3 text-center">
             <div class="brand-logo-wrapper">
               <a href="#">
                 <span class="brand-logo">
@@ -201,7 +201,7 @@
               </a>
             </div>
           </div>
-          <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="col-sm-6 col-md-3 mt-3 mb-3 text-center">
             <div class="brand-logo-wrapper">
               <a href="#">
                 <span class="brand-logo">
@@ -213,7 +213,7 @@
               </a>
             </div>
           </div>
-          <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="col-sm-6 col-md-3 mt-3 mb-3 text-center">
             <div class="brand-logo-wrapper">
               <a href="#">
                 <span class="brand-logo">
@@ -225,7 +225,7 @@
               </a>
             </div>
           </div>
-          <div class="col-md-3 mt-3 mb-3 text-center">
+          <div class="col-sm-6 col-md-3 mt-3 mb-3 text-center">
             <div class="brand-logo-wrapper">
               <a href="#">
                 <span class="brand-logo">
@@ -238,7 +238,7 @@
             </div>
           </div>
         </div>
-        <div class="row">
+        <div class="row d-none d-md-flex">
           <div class="col-md-3 mt-3 mb-3 text-center">
             <div class="brand-logo-wrapper">
               <a href="#">

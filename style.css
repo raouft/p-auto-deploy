@@ -8119,6 +8119,10 @@ section.brands {
   box-sizing: border-box;
   background: linear-gradient(180deg, rgba(37, 37, 37, 0) 10%, rgba(37, 37, 37, 0.6) 80%);
   transition: all 0.2s ease-in 5s; }
+  @media (max-width: 768px) {
+    .controls {
+      bottom: 80px;
+      background: none; } }
 
 .time {
   position: absolute;
