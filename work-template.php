@@ -6,7 +6,8 @@ get_header();?>
     <?php $args = array(
         'post_type' => 'project',
         'order' => 'ASC',
-        'posts_per_page' => 8
+        'posts_per_page' => 8,
+        'paged' => get_query_var( 'paged' )
       );
       $query = new WP_Query( $args );
       ?>
