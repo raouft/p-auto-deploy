@@ -7941,6 +7941,18 @@ body {
   .brand-logo-wrapper:hover .brand-logo-hover {
     transform: translateY(0); }
 
+.post-nav a {
+  padding: 0px 15px 5px;
+  background: #f1f1f1;
+  color: white;
+  font-size: 40px;
+  font-family: sans-serif;
+  transition: 0.2s all ease; }
+  .post-nav a:hover {
+    background: #13989e; }
+    .post-nav a:hover svg g path {
+      fill: white !important; }
+
 .hero-carousel {
   background: #ecf0f1;
   positon: relative;
@@ -8315,7 +8327,8 @@ button:focus {
     height: 350px;
     background-size: cover;
     background-position: center center;
-    background-color: #f1f1f1; }
+    background-color: #f1f1f1;
+    overflow: hidden; }
     .projects__project .project__overlay {
       opacity: 0;
       position: relative;
