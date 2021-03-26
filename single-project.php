@@ -18,7 +18,7 @@
         <img src="<?php echo get_template_directory_uri() ?>/img/case_bg.png" alt="" class="w-100">
       </div>
     </div>
-    <div class="row mt-5">
+    <!-- <div class="row mt-5">
       <div class="col-md-6">
         <img src="<?php echo get_template_directory_uri() ?>/img/project/cs-1.jpg" class="w-100">
       </div>
@@ -28,8 +28,14 @@
           suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in
           vulputate velit esse molestie</p>
       </div>
+    </div> -->
+    <div class="project__content">
+      <?php while(have_posts()) : the_post(); ?>
+      <?php the_content();?>
+      <?php endwhile; ?>
     </div>
   </div>
+
 
   <section class="project__navigator">
     <div class="container">

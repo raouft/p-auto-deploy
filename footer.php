@@ -94,32 +94,7 @@
 </footer>
 </div>
 </div>
-<div class="modal fade" id="contact-modal" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">×</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <h1 class="mb-4 text-center">Get in Touch</h1>
-        <form id="contact-form">
-          <div class="form-group">
-            <input class="form-control" id="name_input" placeholder="Enter your name">
-          </div>
-          <div class="form-group">
-            <input id="email_input" type="email" class="form-control" placeholder="Enter your email">
-          </div>
-          <div class="form-group">
-            <textarea id="message_input" class="form-control" placeholder="Enter your message"></textarea>
-          </div>
-          <button type="submit" class="btn cta-btn is-dark">Submit</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
+<?php get_template_part('partials/modal'); ?>
 <?php wp_footer(); ?>
 <?php get_template_part('partials/cursor'); ?>
 </body>

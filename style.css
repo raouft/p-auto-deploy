@@ -8365,7 +8365,7 @@ button:focus {
       font-weight: 800; }
 
 .project {
-  padding-top: 10em; }
+  padding-top: 7em; }
   .project__info__client {
     color: #6f2180;
     font-size: 1.5em; }
@@ -8384,6 +8384,8 @@ button:focus {
   .project p {
     font-size: 1.3em;
     font-weight: 300; }
+  .project__content {
+    margin-top: 3em; }
   .project__navigator {
     margin-top: 7em;
     padding: 4em 0 3em; }
@@ -8595,6 +8597,14 @@ button:focus {
       font-size: 15px; }
   .about-content .position__details {
     padding: 30px 50px; }
+  .about-content .position .wpcf7-form {
+    text-align: center; }
+    .about-content .position .wpcf7-form input[type="file"] {
+      width: 220px; }
+    .about-content .position .wpcf7-form .wpcf7-submit {
+      display: none; }
+    .about-content .position .wpcf7-form .wpcf7-response-output {
+      margin: 0 30px; }
 
 .team {
   background: #13989e;
@@ -8957,9 +8967,9 @@ section.contact {
   padding: 1em 3em 3em; }
   #contact-modal .modal-body h1 {
     color: #13989e; }
-  #contact-modal .modal-body form#contact-form .form-group {
-    position: relative; }
-    #contact-modal .modal-body form#contact-form .form-group input {
+  #contact-modal .modal-body form .wpcf7-form-control-wrap {
+    margin-bottom: 1.5em; }
+    #contact-modal .modal-body form .wpcf7-form-control-wrap input {
       font-weight: 500;
       border: none;
       outline: none;
@@ -8968,34 +8978,36 @@ section.contact {
       font-size: 1.75em;
       display: block;
       width: 100%;
-      margin-bottom: 25px;
-      transition: 0.25s all ease;
-      background: none;
-      margin-bottom: 1.5em; }
-      #contact-modal .modal-body form#contact-form .form-group input:focus {
-        border-color: #13989e;
-        box-shadow: none;
-        color: #13989e; }
-        #contact-modal .modal-body form#contact-form .form-group input:focus::placeholder {
-          color: #13989e; }
-    #contact-modal .modal-body form#contact-form .form-group textarea {
-      font-weight: 500;
-      border: none;
-      outline: none;
-      border-bottom: 3px solid #808080;
-      padding: 10px 5px;
-      font-size: 1.75em;
-      display: block;
-      width: 100%;
-      margin-bottom: 25px;
       transition: 0.25s all ease;
       background: none; }
-      #contact-modal .modal-body form#contact-form .form-group textarea:focus {
+      #contact-modal .modal-body form .wpcf7-form-control-wrap input:focus {
         border-color: #13989e;
         box-shadow: none;
         color: #13989e; }
-        #contact-modal .modal-body form#contact-form .form-group textarea:focus::placeholder {
+        #contact-modal .modal-body form .wpcf7-form-control-wrap input:focus::placeholder {
           color: #13989e; }
+    #contact-modal .modal-body form .wpcf7-form-control-wrap textarea {
+      font-weight: 500;
+      border: none;
+      outline: none;
+      border-bottom: 3px solid #808080;
+      padding: 10px 5px;
+      font-size: 1.75em;
+      display: block;
+      width: 100%;
+      max-height: 150px;
+      transition: 0.25s all ease;
+      background: none; }
+      #contact-modal .modal-body form .wpcf7-form-control-wrap textarea:focus {
+        border-color: #13989e;
+        box-shadow: none;
+        color: #13989e; }
+        #contact-modal .modal-body form .wpcf7-form-control-wrap textarea:focus::placeholder {
+          color: #13989e; }
+    #contact-modal .modal-body form .wpcf7-form-control-wrap .wpcf7-not-valid-tip {
+      margin-top: 1em; }
+  #contact-modal .modal-body form .wpcf7-response-output {
+    display: none; }
 
 footer {
   padding: 5em 0;

@@ -31,7 +31,7 @@ function wordpressify_setup()
 
 add_action('after_setup_theme', 'wordpressify_setup');
 
-show_admin_bar(false);
+// show_admin_bar(false);
 
 // Checks if there are any posts in the results
 function is_search_has_results()
@@ -109,7 +109,7 @@ function career_post_type()
     'show_in_menu'          => true,
     'menu_position'         => 5,
     'menu_icon'             => 'dashicons-businessman',
-    'show_in_admin_bar'     => false,
+    'show_in_admin_bar'     => true,
     'show_in_nav_menus'     => false,
     'can_export'            => true,
     'has_archive'           => false,
@@ -157,14 +157,14 @@ function project_post_type()
     'label'                 => __('Project', 'text_domain'),
     'description'           => __('Manage list of projects', 'text_domain'),
     'labels'                => $labels,
-    'supports'              => array('title', 'custom-fields'),
+    'supports'              => array('title', 'editor', 'custom-fields'),
     'hierarchical'          => false,
     'public'                => true,
     'show_ui'               => true,
     'show_in_menu'          => true,
     'menu_position'         => 5,
     'menu_icon'             => 'dashicons-open-folder',
-    'show_in_admin_bar'     => false,
+    'show_in_admin_bar'     => true,
     'show_in_nav_menus'     => false,
     'can_export'            => true,
     'has_archive'           => false,
@@ -175,3 +175,49 @@ function project_post_type()
   register_post_type('project', $args);
 }
 add_action('init', 'project_post_type', 0);
+
+// Change excerpt read more text
+function new_excerpt_more($more) {
+  return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+
+
+add_filter( 'gform_validation_message_1', function ( $message, $form ) {
+  if ( gf_upgrade()->get_submissions_block() ) {
+      return $message;
+  }
+
+  $message = '<ul>';
+
+  foreach ( $form['fields'] as $field ) {
+      if ( $field->failed_validation ) {
+          $message .= sprintf( '<li>%s - %s</li>', $field->validation_message );
+      }
+  }
+
+  $message .= '</ul>';
+
+  return $message;
+}, 10, 2 );
+
+// Add ACF Options page
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+    'position'    => '60'
+	));
+}
+
+// Allow Contact Form 7 to take preset input values
+add_filter( 'shortcode_atts_wpcf7', 'custom_shortcode_atts_wpcf7_filter', 10, 3 );
+function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {
+  $my_attr = 'career';
+  if ( isset( $atts[$my_attr] ) ) {
+    $out[$my_attr] = $atts[$my_attr];
+  }
+  return $out;
+}

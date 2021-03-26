@@ -25,66 +25,29 @@ get_header();?>
 <section class="about-content">
   <div class="container">
     <div class="row d-flex justify-content-between">
+    <?php $args = array(
+        'post_type' => 'career',
+      );
+      $query = new WP_Query( $args );
+      ?>
       <div class="col-md-6">
-        <h1 class="about-content__pitch mb-5 text-center text-md-left">
-          Job Opportunities
-        </h1>
-        <div class="position mb-4">
-          <input type="file" class="d-none">
-          <div class="position__upload-cv">
-            <div class="upload-button">
-              <img src="<?php echo get_template_directory_uri() ?>/img/careers/upload.svg">
-              <p class="mt-3">Upload CV</p>
-            </div>
-          </div>
-          <div class="position__details d-flex justify-content-between align-items-center">
-            <div>
-              <p class="position__details__dept">Department</p>
-              <h4 class="position__details__name">Position</h4>
-            </div>
-            <div>
-              <a href="#" class="btn cta-btn is-light">Apply</a>
-            </div>
-          </div>
-        </div>
+      <?php if ( $query->have_posts() ) :
+              while ( $query->have_posts() ) : $query->the_post();?>
+      <?php if ($query->current_post%2 == 1): ?>
+        <?php if ($query->current_post == 1): ?>
+          <h1 class="about-content__pitch mb-5 text-center text-md-left">
+            Job Opportunities
+          </h1>
+        <?php endif; ?>
+        <?php get_template_part('partials/career-block'); ?>
+        <?php endif; endwhile; endif; ?>
       </div>
       <div class="col-md-6">
-        <div class="position mb-4">
-          <input type="file" class="d-none">
-          <div class="position__upload-cv">
-            <div class="upload-button">
-              <img src="<?php echo get_template_directory_uri() ?>/img/careers/upload.svg">
-              <p class="mt-3">Upload CV</p>
-            </div>
-          </div>
-          <div class="position__details d-flex justify-content-between align-items-center">
-            <div>
-              <p class="position__details__dept">Department</p>
-              <h4 class="position__details__name">Position</h4>
-            </div>
-            <div>
-              <a href="#" class="btn cta-btn is-light">Apply</a>
-            </div>
-          </div>
-        </div>
-        <div class="position mb-4">
-          <input type="file" class="d-none">
-          <div class="position__upload-cv">
-            <div class="upload-button">
-              <img src="<?php echo get_template_directory_uri() ?>/img/careers/upload.svg">
-              <p class="mt-3">Upload CV</p>
-            </div>
-          </div>
-          <div class="position__details d-flex justify-content-between align-items-center">
-            <div>
-              <p class="position__details__dept">Department</p>
-              <h4 class="position__details__name">Position</h4>
-            </div>
-            <div>
-              <a href="#" class="btn cta-btn is-light">Apply</a>
-            </div>
-          </div>
-        </div>
+      <?php if ( $query->have_posts() ) :
+              while ( $query->have_posts() ) : $query->the_post();?>
+      <?php if ($query->current_post%2 == 0): ?>
+        <?php get_template_part('partials/career-block'); ?>
+      <?php endif; endwhile; endif; wp_reset_postdata();?>
       </div>
     </div>
   </div>

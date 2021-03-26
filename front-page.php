@@ -57,13 +57,25 @@
 
 <div class="case-studies">
   <div class="hero-carousel">
+  <?php $args = array(
+        'post_type' => 'project',
+        'posts_per_page' => 3,
+        'meta_key'		=> 'display_in_home_carousel',
+	      'meta_value'	=> '1',
+        'orderby' => 'title',
+        'order' => 'ASC',
+      );
+      $query = new WP_Query( $args );
+      ?>
+      <?php if ( $query->have_posts() ) :
+              while ( $query->have_posts() ) : $query->the_post();?>
     <div class="hero-carousel__slide"
-      style="background-image: url('<?php echo get_template_directory_uri() ?>/img/case_bg.png')">
+      style="background-image: url('<?php the_field( 'hero_image' ); ?>')">
       <div class="container h-100">
         <div class="row h-100">
           <div class="col d-flex align-items-center">
             <div class="hero-carousel__text">
-              <h1>Study case <br> no 1</h1>
+              <h1>Study case <br> no <?php echo $query->current_post+1 ?></h1>
               <a href="#" class="btn cta-btn is-light">See Work</a>
               <div class="hero-carousel__navigation d-sm-none d-block">
                 <img id="prev" src="<?php echo get_template_directory_uri() ?>/img/left_arrow.svg">
@@ -74,23 +86,7 @@
         </div>
       </div>
     </div>
-    <div class="hero-carousel__slide"
-      style="background-image: url('<?php echo get_template_directory_uri() ?>/img/case_bg.png')">
-      <div class="container h-100">
-        <div class="row h-100">
-          <div class="col d-flex align-items-center">
-            <div class="hero-carousel__text">
-              <h1>Study case <br> no 1</h1>
-              <a href="#" class="btn cta-btn is-light">See Work</a>
-              <div class="hero-carousel__navigation d-sm-none d-block">
-                <img id="prev" src="<?php echo get_template_directory_uri() ?>/img/left_arrow.svg">
-                <img id="next" src="<?php echo get_template_directory_uri() ?>/img/right_arrow.svg">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <?php endwhile; endif; wp_reset_postdata();?>
   </div>
   <section class="news">
     <div class="container">
@@ -108,54 +104,28 @@
       </div>
     </div>
     <div class="news__articles">
-      <article data-scroll data-scroll-speed="1" class="news-item">
-        <a href="#" class="d-block w-100 overflow-hidden">
-          <picture class="w-100 h-100 position-relative overflow-hidden">
-            <img src="<?php echo get_template_directory_uri() ?>/img/news_1.jpg" class="h-100">
-          </picture>
-        </a>
-        <div class="mt-4 pl-3 pr-3">
-          <p class="news-item__info">December 10, 2019 | Bucharest</p>
-          <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
-          <a href="#" class="news-item__read-more">Read More ></a>
-        </div>
-      </article>
-      <article data-scroll data-scroll-speed="2" class="news-item">
-        <a href="#" class="d-block w-100 overflow-hidden">
-          <picture class="w-100 h-100 position-relative overflow-hidden">
-            <img src="<?php echo get_template_directory_uri() ?>/img/news_2.png" class="h-100">
-          </picture>
-        </a>
-        <div class="mt-4 pl-3 pr-3">
-          <p class="news-item__info">December 10, 2019 | Bucharest</p>
-          <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
-          <a href="#" class="news-item__read-more">Read More ></a>
-        </div>
-      </article>
-      <article data-scroll data-scroll-speed="1" class="news-item">
-        <a href="#" class="d-block w-100 overflow-hidden">
-          <picture class="w-100 h-100 position-relative overflow-hidden">
-            <img src="<?php echo get_template_directory_uri() ?>/img/news_1.jpg" class="h-100">
-          </picture>
-        </a>
-        <div class="mt-4 pl-3 pr-3">
-          <p class="news-item__info">December 10, 2019 | Bucharest</p>
-          <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
-          <a href="#" class="news-item__read-more">Read More ></a>
-        </div>
-      </article>
-      <article data-scroll data-scroll-speed="2" class="news-item">
-        <a href="#" class="d-block w-100 overflow-hidden">
-          <picture class="w-100 h-100 position-relative overflow-hidden">
-            <img src="<?php echo get_template_directory_uri() ?>/img/news_2.png" class="h-100">
-          </picture>
-        </a>
-        <div class="mt-4 pl-3 pr-3">
-          <p class="news-item__info">December 10, 2019 | Bucharest</p>
-          <p class="news-item__excerpt">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam</p>
-          <a href="#" class="news-item__read-more">Read More ></a>
-        </div>
-      </article>
+    <?php $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => 4,
+        'tag' => 'featured'
+      );
+      $query = new WP_Query( $args );
+      ?>
+      <?php if ( $query->have_posts() ) :
+              while ( $query->have_posts() ) : $query->the_post();?>
+            <article data-scroll <?php echo $query->current_post%2 == 0 ? "data-scroll-speed='1'" : "data-scroll-speed='2'"; ?> class="news-item">
+              <a href="#" class="d-block w-100 overflow-hidden">
+                <picture class="w-100 h-100 position-relative overflow-hidden">
+                  <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="h-100">
+                </picture>
+              </a>
+              <div class="mt-4 pl-3 pr-3">
+                <p class="news-item__info"><?php echo get_the_date(); ?> | Bucharest</p>
+                <p class="news-item__excerpt"><?php the_excerpt(); ?></p>
+                <a href="<?php the_permalink(); ?>" class="news-item__read-more">Read More ></a>
+              </div>
+            </article>
+            <?php endwhile; endif; wp_reset_postdata();?>
     </div>
   </section>
 
